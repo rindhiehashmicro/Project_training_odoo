@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="rindhiecounter_handphone_tree" model="ir.ui.view">
+      <field name="name">rindhiecounter.handphone.view.tree</field>
+      <field name="model">rindhiecounter.handphone</field>
+      <field name="arch" type="xml">
+          <tree string="Product Tree">
+            <field name="name" />
+            <field name="ram" />
+            <field name="memory" />
+            <field name="type" />
+            <field name="detail_id" />
+            <field name="active" />
+          </tree>
+      </field>
+    </record>
+
+    <record id="rindhiecounter_handphone_view_form" model="ir.ui.view">
+      <field name="name">rindhiecounter.handphone.view.form</field>
+      <field name="model">rindhiecounter.handphone</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+              <group>
+              <!-- Add your group fields here -->
+                <group colspan='4'>
+                  <group colspan='2'>
+                    <separator string='JENIS HANDPHONE'/>
+                      <field name="name" />
+                      <field name="type" />
+                  </group>
+                  <group colspan='2'>
+                    <separator string='MEMORY'/>
+                      <field name="ram" />
+                      <field name="memory" />
+                  </group>
+                  <notebook>
+                    <page string="DETAIL">
+                      <field name="detail_id" nolebel="1"/>
+                    </page>
+                  </notebook>
+                </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="rindhiecounter_handphone_view_search" model="ir.ui.view">
+      <field name="name">rindhiecounter.handphone.view.search</field>
+      <field name="model">rindhiecounter.handphone</field>
+      <field name="arch" type="xml">
+        <search string="Pencarian">
+          <field name="name" />
+          <field name="type" />
+        </search>
+      </field>
+    </record>
+
+    <record id="rindhiecounter_handphone_action" model="ir.actions.act_window">
+      <field name="name">rindhiecounter.handphone.action</field>
+      <field name="res_model">rindhiecounter.handphone</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+                    Jenis Handphone
+           </p><p>
+                </p>
+      </field>
+    </record>
+ 
+    <menuitem
+      id="rindhiecounter_jenishp_menu_act"
+      name="Jenis Handphone"
+      parent="rindhiecounter_datamaster_menu_categ"
+      action="rindhiecounter_handphone_action" sequence="1" />
+  </data>
+</odoo>

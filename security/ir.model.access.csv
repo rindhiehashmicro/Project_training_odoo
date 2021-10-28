@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rindhiecounter_handphone,access.rindhiecounter.handphone,model_rindhiecounter_handphone,,1,1,1,1
+access_rindhiecounter_kategori,access.rindhiecounter.kategori,model_rindhiecounter_kategori,,1,1,1,1
+access_rindhiecounter_order,access.rindhiecounter.order,model_rindhiecounter_order,,1,1,1,1
+access_rindhiecounter_detailpembelian,access.rindhiecounter.detailpembelian,model_rindhiecounter_detailpembelian,,1,1,1,1

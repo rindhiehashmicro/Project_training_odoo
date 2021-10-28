@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="rindhiecounter_kategori_tree" model="ir.ui.view">
+      <field name="name">rindhiecounter.kategori.view.tree</field>
+      <field name="model">rindhiecounter.kategori</field>
+      <field name="arch" type="xml">
+          <tree string="Product Tree">  
+            <field name="warna" />
+            <field name="kondisi" />
+            <field name="stock_id"/>
+            <field name="stock"/>
+            <field name="tersedia" />
+            <field name="harga" />
+          </tree>
+      </field>
+    </record>
+ 
+    <record id="rindhiecounter_kategori_view_form" model="ir.ui.view">
+      <field name="name">rindhiecounter.kategori.view.form</field>
+      <field name="model">rindhiecounter.kategori</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group colspan='4'>
+                <group colspan='2'>
+                  <separator string='COLOUR HANDPHONE'/>
+                    <field name="warna" />
+                </group>
+                <group colspan='2'>
+                  <separator string='KONDISI HANDPHONE'/>
+                    <field name="kondisi" />
+                    <field name="stock" />
+                    <field name="tersedia" />
+                </group>
+                <notebook>
+                    <page string="HARGA">
+                      <field name="harga" />
+                    </page>
+                  <page string="HANDPHONE">
+                    <field name="stock_id" />
+                  </page>
+                  <page string="Penanggung Jawab">
+                    <field name="pegawai_id" nolabel="1"/>
+                  </page>
+                </notebook>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+ 
+    <record id="rindhiecounter_kategori_action" model="ir.actions.act_window">
+      <field name="name">rindhiecounter.kategori.action</field>
+      <field name="res_model">rindhiecounter.kategori</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Diisi dengan kategori handphone
+        </p>
+      </field>
+    </record>
+ 
+    <menuitem
+      id="rindhiecounter_kategori_menu_act"
+      name="Kategori"
+      parent="rindhiecounter_datamaster_menu_categ"
+      action="rindhiecounter_kategori_action" sequence="1" />
+  
+  </data>
+</odoo>

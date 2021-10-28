@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <menuitem id="rindhiecounter_menu_root" name="Counter Handphone" sequence="10"/>
+        <menuitem id="rindhiecounter_datamaster_menu_categ" name="Data Handphone" parent='rindhiecounter_menu_root' sequence="10"/>
+        <menuitem id="rindhiecounter_customer_menu_categ" name="Data Customer" 
+        parent='rindhiecounter_menu_root' sequence="20"/>
+        <menuitem id="rindhiecounter_order_menu_categ" name="Operasional" 
+        parent='rindhiecounter_menu_root' sequence="10"/>
+    </data>
+</odoo>
